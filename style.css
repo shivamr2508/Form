@@ -1,0 +1,162 @@
+/* Simple Clean Registration Form */
+
+/* 1. Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Page Background and Centering */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 3. Main Form White Box */
+.form-container {
+    background-color: #ffffff; /* Solid white background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* 4. Headings */
+.form-title {
+    text-align: center;
+    color: #333333; /* Dark gray text */
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* 5. Form Group Layout */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* 6. Standard Inputs */
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+.hello-one,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc; /* Simple gray border */
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+/* Highlight the box when the user clicks inside it */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #a855f7; /* Purple border on focus */
+    box-shadow: 0 0 5px rgba(168, 85, 247, 0.3);
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical; /* Only allow up/down resizing */
+}
+
+/* 7. Radio Buttons and Checkboxes */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.radio-label,
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-weight: normal; /* Override the bold label style from above */
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* 8. Buttons */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    flex: 1; /* Makes both buttons take up equal space */
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #a855f7; /* Purple color from your original theme */
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #9333ea; /* Slightly darker purple when hovering */
+}
+
+input[type="reset"] {
+    background-color: #e5e7eb; /* Light gray */
+    color: #333333;
+}
+
+input[type="reset"]:hover {
+    background-color: #d1d5db; /* Slightly darker gray when hovering */
+}
+
+/* 9. Bottom Link */
+.form-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-link a {
+    color: #a855f7;
+    text-decoration: none;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
