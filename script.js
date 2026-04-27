@@ -39,7 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Enter valid phone number");
             e.preventDefault();
             return;
-        } 
+        } else if(isNaN(phone)) {
+            alert("Only numbers allowed!");
+            e.preventDefault();
+            return;
+}
 
         alert("Form submitted successfully!");
     });
