@@ -1,13 +1,11 @@
-/* Simple Clean Registration Form */
 
-/* 1. Reset basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. Page Background and Centering */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f9; /* Light gray background */
@@ -18,7 +16,7 @@ body {
     padding: 20px;
 }
 
-/* 3. Main Form White Box */
+
 .form-container {
     background-color: #ffffff; /* Solid white background */
     border-radius: 10px; /* Rounded corners */
@@ -28,7 +26,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-/* 4. Headings */
+
 .form-title {
     text-align: center;
     color: #333333; /* Dark gray text */
@@ -43,7 +41,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* 5. Form Group Layout */
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -56,7 +54,7 @@ label {
     margin-bottom: 8px;
 }
 
-/* 6. Standard Inputs */
+
 input[type="text"],
 input[type="password"],
 input[type="tel"],
@@ -72,7 +70,7 @@ textarea {
     background-color: #ffffff;
 }
 
-/* Highlight the box when the user clicks inside it */
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -86,7 +84,7 @@ textarea {
     resize: vertical; /* Only allow up/down resizing */
 }
 
-/* 7. Radio Buttons and Checkboxes */
+
 .radio-group,
 .checkbox-group {
     display: flex;
@@ -108,7 +106,7 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-/* 8. Buttons */
+
 .button-group {
     display: flex;
     gap: 15px;
@@ -144,7 +142,7 @@ input[type="reset"]:hover {
     background-color: #d1d5db; /* Slightly darker gray when hovering */
 }
 
-/* 9. Bottom Link */
+
 .form-link {
     text-align: center;
     margin-top: 20px;
