@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         
-        if (phone.length < 10 && phone.length > 10) {
+        if (phone.length < 10 || phone.length > 10) {
             alert("Enter valid phone number");
             e.preventDefault();
             return;
