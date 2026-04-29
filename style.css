@@ -158,3 +158,13 @@ input[type="reset"]:hover {
     text-decoration: underline;
 }
 
+.Register-link {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.register-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
