@@ -1,3 +1,45 @@
+<?php
+// Include database connection
+include('db.php');
+
+$message = '';
+$messageType = '';
+
+// Handle form submission
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Get form data
+    $firstname = $_POST['name'] ?? '';
+    $lastname = $_POST['lastname'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $phone = $_POST['phone'] ?? '';
+    $date = $_POST['dob'] ?? '';
+    $address = $_POST['address'] ?? '';
+    
+    // Validate required fields
+    if (empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($phone)) {
+        $message = "Please fill in all required fields!";
+        $messageType = "error";
+    } else {
+        // Insert data into database
+       $stmt = $conn->prepare("INSERT INTO registration_form 
+(firstname, lastname, email, password, phone, date, address) 
+VALUES (?, ?, ?, ?, ?, ?, ?)");
+        
+        $stmt->bind_param("sssssss", $firstname, $lastname, $email, $password, $phone, $date, $address);
+        
+        if ($stmt->execute()) {
+            $message = "Registration successful! Your data has been saved.";
+            $messageType = "success";
+        } else {
+            $message = "Error: " . $stmt->error;
+            $messageType = "error";
+        }
+        
+        $stmt->close();
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +54,13 @@
 <div class="form-container">
     <h2 class="form-title">Registration Form</h2><br>
     
+    <?php if (!empty($message)): ?>
+        <div class="message message-<?php echo $messageType; ?>">
+            <?php echo $message; ?>
+        </div>
+    <?php endif; ?>
 
-    <form>
+    <form method="POST" action="">
 
         <div class="form-group">
             <label for="name">First Name:</label>
@@ -109,7 +156,7 @@
         
         <div>
             <br> <br>
-            <p class="register-p">Already have an account ?<a href="/login form/index.html" class="Register-link">Log in</a></p>
+            <p class="register-p">Already have an account ?<a href="/login.php" class="Register-link">Log in</a></p>
         </div>
     </form>
 

@@ -34,7 +34,7 @@
         </div> <br> <br> <br>
 
 
-        <p class="register-p">Don't have an account ?<a href="/index.html" class="Register-link">Register</a></p>
+        <p class="register-p">Don't have an account ?<a href="/index.php" class="Register-link">Register</a></p>
         </form>
     </div>
 
